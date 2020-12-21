@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="WpfAppDataSet.Controles.ucMostrarCliente"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppDataSet.Controles"
+             mc:Ignorable="d" Height="482" Width="467">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ID Usuario" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="114" Grid.Column="1" Grid.Row="1" Margin="0,12,0,0" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Teléfono" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="114" Grid.Column="1" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,63,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Dirección" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="114" Grid.Column="1" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,3,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Cédula" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="114" Grid.Column="1" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,36,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Apellido" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="114" Grid.Column="1" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,74,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nombre" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="114" Grid.Column="1" Grid.RowSpan="2" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock x:Name="tbxIdUsuario" Grid.Column="2" HorizontalAlignment="Left" Margin="56,12,0,0" TextWrapping="Wrap" Text="TextBlock" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="184" Grid.Row="1" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock x:Name="tbxNombre" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="165" Margin="56,74,0,0" Grid.RowSpan="2" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock x:Name="tbxApellido" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="184" Margin="56,36,0,0" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock x:Name="tbxCedula" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="184" Margin="56,3,0,0" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock x:Name="tbxDireccion" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="165" Margin="56,63,0,0" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock x:Name="tbxTelefono" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="TextBlock" FontSize="23" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="165" Margin="56,30,0,0" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock Grid.Column="1" Margin="0,27,59,0" TextWrapping="Wrap" Text="Datos del Usuario" FontSize="34" VerticalAlignment="Top" Grid.ColumnSpan="4" FontWeight="Bold" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Black"/>
+    </Grid>
+</UserControl>

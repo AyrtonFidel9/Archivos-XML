@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetBiblioteca xmlns="http://tempuri.org/DataSetBiblioteca.xsd">
+  <Prestamos>
+    <idPrestamos>9812</idPrestamos>
+    <idLibro>7812</idLibro>
+    <idUsuario>6616</idUsuario>
+    <FecPrestamo>20/12/2020 0:00:00</FecPrestamo>
+    <FecDevolucion>29/12/2020 0:00:00</FecDevolucion>
+  </Prestamos>
+  <Prestamos>
+    <idPrestamos>6512</idPrestamos>
+    <idLibro>7812</idLibro>
+    <idUsuario>0912</idUsuario>
+    <FecPrestamo>20/12/2020 0:00:00</FecPrestamo>
+    <FecDevolucion>29/12/2020 0:00:00</FecDevolucion>
+  </Prestamos>
+</DataSetBiblioteca>

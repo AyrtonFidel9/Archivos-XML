@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetBiblioteca xmlns="http://tempuri.org/DataSetBiblioteca.xsd">
+  <Libros>
+    <idLibro>7812</idLibro>
+    <idAutor>9812</idAutor>
+    <Titulo>Matemática 1</Titulo>
+    <Editorial>MathGrill</Editorial>
+    <NumPags>871</NumPags>
+  </Libros>
+</DataSetBiblioteca>

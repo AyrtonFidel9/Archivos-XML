@@ -1,0 +1,90 @@
+﻿<mah:MetroWindow x:Class="WpfAppDataSet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDataSet"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        xmlns:uc="clr-namespace:WpfAppDataSet.Controles"
+        GlowBrush="Black"
+        Title="Biblioteca" Height="537" Width="790" MinHeight="537" MinWidth="790" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9" SpreadMethod="Repeat">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.65" ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="-38" AngleX="74" CenterY="0.5" CenterX="0.65"/>
+                        <RotateTransform Angle="-47" CenterY="0.5" CenterX="0.65"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#7AB6FF"/>
+                <GradientStop Color="#7AB6FF" Offset="1"/>
+                <GradientStop Color="#7AB6FF" Offset="0.179"/>
+                <GradientStop Color="#CE7AFF" Offset="0.286"/>
+                <GradientStop Color="#9A6FE8" Offset="0.579"/>
+                <GradientStop Color="#FF6C8BF3" Offset="0.818"/>
+                <GradientStop Color="#7AB6FF" Offset="0.925"/>
+                <GradientStop Color="#FF00B299" Offset="0.711"/>
+                <GradientStop Color="#6F85E8" Offset="0.464"/>
+                <GradientStop Color="#7AB6FF" Offset="0.393"/>
+                <GradientStop Color="#FF8DE054" Offset="0.118"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <uc:ucClientes Grid.Column="0" Margin="10,0,7,0" x:Name="UsuariosPanel">
+                <uc:ucClientes.Background>
+                    <ImageBrush ImageSource="/WpfAppDataSet;component/Images/usuarios.jpg" Stretch="UniformToFill"/>
+                </uc:ucClientes.Background>
+            </uc:ucClientes>
+            <uc:ucPrestamos Grid.Column="1" Margin="6,0">
+                <uc:ucPrestamos.Background>
+                    <ImageBrush ImageSource="Images/biblioteca.jpg" Stretch="UniformToFill"/>
+                </uc:ucPrestamos.Background>
+            </uc:ucPrestamos>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <uc:ucAutores Margin="6,0,9,5" Grid.Row="0" Height="Auto">
+                    <uc:ucAutores.Background>
+                        <ImageBrush ImageSource="Images/escritor.jpg"/>
+                    </uc:ucAutores.Background>
+                </uc:ucAutores>
+
+                <uc:ucLibros Grid.Row="1" Margin="6,6,10,0">
+                    <uc:ucLibros.Background>
+                        <ImageBrush ImageSource="Images/libros 2.jpg"/>
+                    </uc:ucLibros.Background>
+                </uc:ucLibros>
+
+            </Grid>
+        </Grid>
+
+        <Border>
+            <Border.Effect>
+                <BlurEffect Radius="100" KernelType="Gaussian"/>
+            </Border.Effect>
+        </Border>
+        <Label Grid.Row="0" Grid.Column="0" Content="Biblioteca El Gran Saber" Margin="217,2,180,14" FontSize="30" FontWeight="Bold" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Black"/>
+
+        <Button x:Name="btnMostrar" Content="Button" HorizontalAlignment="Left" Margin="629,368,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</mah:MetroWindow>

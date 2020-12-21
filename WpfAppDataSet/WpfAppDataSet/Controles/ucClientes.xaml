@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WpfAppDataSet.Controles.ucClientes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppDataSet.Controles"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="248">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Usuarios" Margin="60,26,61,10" FontSize="30" Foreground="White" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium" >
+            <TextBlock.Effect>
+                <DropShadowEffect
+                      ShadowDepth="2"
+                      Direction="330"
+                      Color="Black"
+                      Opacity="1"
+                     BlurRadius="10"/>        
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button Grid.Row="1" x:Name="btnAgregar" Content="Agregar" Margin="45,21,0,0" VerticalAlignment="Top" Height="47" FontSize="17" HorizontalAlignment="Left" Width="157" Click="btnAgregar_Click" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <Button Grid.Row="2" x:Name="btnModificar" Content="Modificar" Margin="45,21,0,0" FontSize="17" HorizontalAlignment="Left" Width="157" Height="48" VerticalAlignment="Top" Click="btnModificar_Click" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <Button Grid.Row="3" x:Name="btnEliminar" Content="Eliminar" Margin="45,21,0,0" FontSize="17" HorizontalAlignment="Left" Width="157" Height="48" VerticalAlignment="Top" Click="btnEliminar_Click" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <Button Grid.Row="4" x:Name="btnMostrar" Content="Mostrar" Margin="43,21,0,0" FontSize="17" HorizontalAlignment="Left" Width="157" Height="48" VerticalAlignment="Top" Click="btnMostrar_Click" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+
+    </Grid>
+</UserControl>

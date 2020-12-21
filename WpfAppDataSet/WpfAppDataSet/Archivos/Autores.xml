@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetBiblioteca xmlns="http://tempuri.org/DataSetBiblioteca.xsd">
+  <Autor>
+    <idAutor>8712</idAutor>
+    <Nombre>Jose Hernán Samaniego</Nombre>
+    <Nacionalidad>Argentina</Nacionalidad>
+  </Autor>
+  <Autor>
+    <idAutor>9812</idAutor>
+    <Nombre>Jose Esterilla</Nombre>
+    <Nacionalidad>Ecuador</Nacionalidad>
+  </Autor>
+</DataSetBiblioteca>

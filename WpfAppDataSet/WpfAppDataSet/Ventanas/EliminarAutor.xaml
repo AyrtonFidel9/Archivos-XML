@@ -1,0 +1,40 @@
+﻿<mah:MetroWindow x:Class="WpfAppDataSet.Ventanas.EliminarAutor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDataSet.Ventanas"
+        mc:Ignorable="d"
+        Title="EliminarAutor"  Height="410" Width="485" MinHeight="410" MinWidth="485" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.905">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-3" ScaleX="3"/>
+                        <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="-30" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF7AB6FF" Offset="1"/>
+                <GradientStop Color="#FF7AB6FF" Offset="0.65"/>
+                <GradientStop Color="#FF7AB6FF" Offset="0.475"/>
+                <GradientStop Color="White" Offset="0.811"/>
+                <GradientStop Color="#FF7AB6FF" Offset="0.25"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Height="48" Margin="101,10,0,0" TextWrapping="Wrap" Text="Datos del Autor" VerticalAlignment="Top" Width="283" FontSize="36" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="69,100,0,0" TextWrapping="Wrap" Text="ID Autor" VerticalAlignment="Top" FontSize="20" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="264,100,0,0" TextWrapping="Wrap" Text="TextBlock" x:Name="tbxIdAutor" VerticalAlignment="Top" FontSize="20" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock HorizontalAlignment="Left" Margin="69,160,0,0" TextWrapping="Wrap" Text="Nombre Completo" VerticalAlignment="Top" FontSize="20" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="69,224,0,0" TextWrapping="Wrap" Text="Nacionalidad"  VerticalAlignment="Top" FontSize="20" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="264,160,0,0" TextWrapping="Wrap" Text="TextBlock" x:Name="tbxNombreCompleto" VerticalAlignment="Top" FontSize="20" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <TextBlock HorizontalAlignment="Left" Margin="264,224,0,0" TextWrapping="Wrap" Text="TextBlock" x:Name="tbxNacionalidad" VerticalAlignment="Top" FontSize="20" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"/>
+        <Button x:Name="btnEliminar" Click="btnEliminar_Click" Content="Eliminar" HorizontalAlignment="Left" Margin="101,301,0,0" VerticalAlignment="Top" Width="124" Height="42" FontSize="18" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC"/>
+        <Button x:Name="btnCancelar" Click="btnCancelar_Click" Content="Cancelar" HorizontalAlignment="Left" Margin="260,301,0,0" VerticalAlignment="Top" Width="124" Height="42" FontSize="18" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC"/>
+
+    </Grid>
+</mah:MetroWindow>

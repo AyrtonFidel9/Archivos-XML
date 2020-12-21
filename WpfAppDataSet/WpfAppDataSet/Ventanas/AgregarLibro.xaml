@@ -1,0 +1,130 @@
+﻿<mah:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDataSet.Ventanas"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="WpfAppDataSet.Ventanas.AgregarLibro"
+        xmlns:c ="clr-namespace:WpfAppDataSet.Clases"
+        mc:Ignorable="d"
+        Title="Agregar Libro" Height="540" Width="630" MaxWidth="630" MaxHeight="540"
+        MinWidth="630" MinHeight="540" x:Name="VentanaIngreso" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <mah:MetroWindow.Resources>
+        <c:Validaciones x:Key="validacion"></c:Validaciones>
+        <Style TargetType="{x:Type TextBox}" x:Key="validacion1">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel LastChildFill="true">
+                            <Border Background="#FFF20000" DockPanel.Dock="right" Margin="5,0,0,0" Width="20" Height="20" CornerRadius="10"
+                                   ToolTip="{Binding ElementName=customAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                <TextBlock Text="!" VerticalAlignment="center" HorizontalAlignment="center" FontWeight="Bold" Foreground="white">
+                                </TextBlock>
+                            </Border>
+                            <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center" >
+                                <Border BorderBrush="#FFF00101" BorderThickness="1" />
+                            </AdornedElementPlaceholder>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </mah:MetroWindow.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.905">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-3" ScaleX="3"/>
+                        <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="-30" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF7AB6FF" Offset="1"/>
+                <GradientStop Color="#FF7AB6FF" Offset="0.65"/>
+                <GradientStop Color="#FF7AB6FF" Offset="0.475"/>
+                <GradientStop Color="White" Offset="0.811"/>
+                <GradientStop Color="#FF7AB6FF" Offset="0.25"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="dgAutores" SelectionMode="Extended" SelectedCellsChanged="dgAutores_SelectedCellsChanged" AutoGenerateColumns="False"  HorizontalAlignment="Left" BorderThickness="1" Height="201" Margin="332,146,0,0" VerticalAlignment="Top" Width="260">
+            <DataGrid.Columns x:Uid="columnaAutores">
+                <DataGridTextColumn Header="ID Autor" Width="90" Binding="{Binding idAutor}"/>
+                <DataGridTextColumn Header="Nombre Completo" Width="*" Binding="{Binding Nombre}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Margin="277,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="101"><InlineUIContainer>
+                <iconPacks:PackIconBoxIcons Kind="SolidBookBookmark" Height="82" Width="68"/>
+            </InlineUIContainer>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="35,147,0,0" TextWrapping="Wrap" Text="ID Libro" VerticalAlignment="Top" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,205,0,0" TextWrapping="Wrap" Text="Titulo" VerticalAlignment="Top" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,262,0,0" TextWrapping="Wrap" Text="Editorial" VerticalAlignment="Top" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"><Run Text="N° "/><Run Text="Páginas"/></TextBlock>
+
+        <mah:MetroProgressBar x:Name="status" HorizontalAlignment="Left" Minimum="0" Maximum="100" Height="20" Margin="35,112,0,0" VerticalAlignment="Top" Width="557"/>
+        <TextBox x:Name="txtIdLibro" HorizontalAlignment="Left" Height="26" KeyDown="txtIdLibro_KeyDown" Margin="145,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"
+               Style="{StaticResource validacion1}">
+            <TextBox.Text>
+                <Binding Path="Id" Source="{StaticResource validacion}" 
+                             ValidatesOnExceptions="True"
+                             UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+         
+        </TextBox>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="26" KeyDown="txtTitulo_KeyDown" Margin="145,205,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"
+             Style="{StaticResource validacion1}">
+            <TextBox.Text>
+                <Binding Path="Otros" Source="{StaticResource validacion}" 
+                             ValidatesOnExceptions="True"
+                             UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>    
+        </TextBox>
+        <TextBox x:Name="txtEditorial" HorizontalAlignment="Left" Height="26" KeyDown="txtEditorial_KeyDown" Margin="145,262,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light" 
+                 Style="{StaticResource validacion1}">
+            <TextBox.Text>
+                <Binding Path="Apellido" Source="{StaticResource validacion}" 
+                             ValidatesOnExceptions="True"
+                             UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="txtPaginas" HorizontalAlignment="Left" Height="26" KeyDown="txtPaginas_KeyDown" Margin="145,322,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="144" FontSize="17" 
+                 FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light"
+                 Style="{StaticResource validacion1}">
+            <TextBox.Text>
+                <Binding Path="Numero" Source="{StaticResource validacion}" 
+                             ValidatesOnExceptions="True"
+                             UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+            
+        </TextBox>
+        <Button Content="Ingresar" x:Name="btnIngresar" FontSize="16" HorizontalAlignment="Left" Margin="156,438,0,-35" VerticalAlignment="Top" Width="133" Height="48" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC" Click="btnIngresar_Click"/>
+        <Button Content="Regresar" x:Name="btnRegresar" FontSize="16" HorizontalAlignment="Left" Margin="332,438,0,-35" VerticalAlignment="Top" Width="133" Height="48" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC" Click="btnRegresar_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Medium"><Run Text="ID Autor"/></TextBlock>
+        <TextBlock x:Name="tbxIdAutor" KeyDown="tbxIdAutor_KeyDown" HorizontalAlignment="Left" Margin="145,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="17" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC Light">
+            
+        </TextBlock>
+
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,15 @@
+﻿<mah:MetroWindow x:Class="WpfAppDataSet.Ventanas.mostrarUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDataSet.Ventanas"
+        xmlns:uc="clr-namespace:WpfAppDataSet.Controles"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="Mostrar Usuario" Height="600" Width="429" MinHeight="600" MinWidth="485" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <uc:ucMostrarCliente x:Name="ucDatosCliente" Margin="5,0,7,89"></uc:ucMostrarCliente>
+        <Button Content="Regresar" x:Name="btnRegresar" Click="btnRegresar_Click" HorizontalAlignment="Left" Margin="140,482,0,0" VerticalAlignment="Top" Width="190" Height="51" FontFamily="/WpfAppDataSet;component/Fonts/#Noto Sans TC" FontSize="17"/>
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetBiblioteca xmlns="http://tempuri.org/DataSetBiblioteca.xsd">
+  <Usuario>
+    <idUsuario>6616</idUsuario>
+    <Nombre>Ayrton</Nombre>
+    <Apellido>Avalos</Apellido>
+    <Cedula>0606252138</Cedula>
+    <Direccion>Guano</Direccion>
+    <Telefono>0912478422</Telefono>
+  </Usuario>
+  <Usuario>
+    <idUsuario>7712</idUsuario>
+    <Nombre>Esteban</Nombre>
+    <Apellido>Alvarez</Apellido>
+    <Cedula>0948732123</Cedula>
+    <Direccion>Ambato</Direccion>
+    <Telefono>0904212321</Telefono>
+  </Usuario>
+  <Usuario>
+    <idUsuario>0912</idUsuario>
+    <Nombre>Sofia</Nombre>
+    <Apellido>Arias</Apellido>
+    <Cedula>0984342122</Cedula>
+    <Direccion>Ambato</Direccion>
+    <Telefono>0967123122</Telefono>
+  </Usuario>
+</DataSetBiblioteca>
